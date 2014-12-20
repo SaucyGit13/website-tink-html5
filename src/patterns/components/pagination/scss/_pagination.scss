@@ -1,0 +1,89 @@
+// Pagination
+
+
+// Pattern variables
+
+
+@mixin pagination-mobile {
+
+    /* PAGINATION
+    ------------------------------------------*/
+    .pagination {
+        margin: 80px 0 2em;
+        text-align: center;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 2px;
+        }
+
+        a,
+        span {
+            display: block;
+            padding: 3px 10px;
+
+            &:link {font-weight: 400; }
+        }
+
+        span {font-weight: 700; }
+
+        // Previous variation
+        .prev {
+            background: {
+                image: url(assets/img/arrow-left-black.png);
+                position: 0 50%;
+                repeat: no-repeat;
+            }
+            padding: 3px 0 3px 15px;
+
+            &:focus,
+            &:active {background-image: url(assets/img/arrow-left-white.png); }
+        }
+
+        // Next variation
+        .next {
+            background: {
+                image: url(assets/img/arrow-right-black.png);
+                position: 100% 50%;
+                repeat: no-repeat;
+            }
+            padding: 3px 15px 3px 0;
+
+            &:focus,
+            &:active {background-image: url(assets/img/arrow-right-white.png); }
+        }
+
+        .dots {padding: 3px 0; }
+    }
+
+    // Theme dark
+    .theme--dark {
+
+        .pagination {
+
+            // Previous variation
+            .prev {
+                background-image: url(assets/img/arrow-left-white.png);
+
+                &:focus,
+                &:active {background-image: url(assets/img/arrow-left-black.png); }
+            }
+
+            // Next variation
+            .next {
+                background-image: url(assets/img/arrow-right-white.png);
+
+                &:focus,
+                &:active {background-image: url(assets/img/arrow-right-black.png); }
+            }
+        }
+    }
+
+} // end mixin

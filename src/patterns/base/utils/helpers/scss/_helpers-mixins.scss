@@ -1,0 +1,83 @@
+// Helpers mixins
+//
+// Reusable mixins that can be included in other selectors.
+
+
+@mixin clearfix {
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {clear: both; }
+
+} // end mixin
+
+
+@mixin hide {
+
+    position: absolute;
+    left: -999em;
+
+} // end mixin
+
+
+@mixin text--larger {
+
+    font-size: 140%;
+
+} // end mixin
+
+
+@mixin text--large {
+
+    font-size: 120%;
+
+} // end mixin
+
+
+@mixin text--small {
+
+    font-size: 80%;
+
+} // end mixin
+
+
+@mixin text--smaller {
+
+    font-size: 60%;
+
+} // end mixin
+
+
+@mixin alignnone {
+
+    margin: 5px 20px 20px 0;
+
+} // end mixin
+
+
+@mixin aligncenter {
+
+    display: block;
+    margin: 5px auto;
+
+} // end mixin
+
+
+@mixin alignright {
+
+    float:right;
+    margin: 5px 0 20px 20px;
+
+} // end mixin
+
+
+@mixin alignleft {
+
+    float: left;
+    margin: 5px 20px 20px 0;
+
+} // end mixin

@@ -1,0 +1,112 @@
+// Footer
+
+
+// Pattern variables
+$footer-font-family: $display-font-family;
+$footer-background-color: $black-pure;
+$footer-color: $white-pure;
+$footer-text-shadow-color: $black-pure;
+$footer-background-color-focus: $white-pure;
+$footer-color-focus: $black-pure;
+
+$footer-color-tablet: $black-pure;
+$footer-background-color-focus-tablet: $black-pure;
+$footer-color-focus-tablet: $white-pure;
+
+
+@mixin footer-mobile {
+
+    /* FOOTER
+    ------------------------------------------*/
+    .footer {
+        background-color: $footer-background-color;
+        color: $footer-color;
+        padding: 5px 10px;
+
+        a {
+            color: $footer-color;
+            transition: all .3s;
+
+            &:focus,
+            &:active {
+                background-color: $footer-background-color-focus;
+                color: $footer-color-focus;
+                transition: all .3s;
+            }
+        }
+
+        p {
+            font: {
+                family: $footer-font-family;
+                weight: 900;
+            }
+        }
+    }
+
+} // end mixin
+
+
+@mixin footer-tablet {
+
+    /* FOOTER
+    ------------------------------------------*/
+    .footer {
+        background: {
+            color: transparent;
+            image: url(assets/img/silhouette.png);
+            position: 100% 100%;
+            repeat: no-repeat;
+        }
+        min-height: 40px;
+        padding-top: 310px;
+        text-align: right;
+
+        a {
+            color: $footer-color-tablet;
+
+            &:focus,
+            &:active {
+                background-color: $footer-background-color-focus-tablet;
+                color: $footer-color-focus-tablet;
+            }
+        }
+
+        .footer_links {
+            display: inline-block;
+            margin: .5em 0;
+            max-width: 50%;
+            vertical-align: bottom;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            margin: .5em 15px 0 0;
+        }
+
+        p {
+            display: inline-block;
+            margin: .5em 80px .5em 0;
+            width: 35%;
+            vertical-align: bottom;
+            text-shadow: 0 0 3px $footer-text-shadow-color;
+        }
+    }
+
+    // Home & Single
+    .home,
+    .single {
+
+        .footer {margin-top: -80px; } // match margin applied to pager
+    }
+
+    // Home
+    .home {
+
+        .footer {
+            position: relative;
+            z-index: 6000;
+        }
+    }
+
+} // end mixin

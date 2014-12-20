@@ -1,0 +1,13 @@
+// Label
+
+
+@mixin label-mobile {
+
+    /* LABEL
+    ------------------------------------------*/
+    label {
+        display: block;
+        text-transform: uppercase;
+    }
+
+} // end mixin

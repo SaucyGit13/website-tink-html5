@@ -1,0 +1,67 @@
+// Project specific variables
+
+//------------------------------------------------------------------------------------
+//  RESPONSIVE BREAK POINTS
+//------------------------------------------------------------------------------------
+$rbp-mobile_large: 31em;  // 496px
+$rbp-tablet: 47em;        // 752px
+$rbp-tablet-medium: 52em; // 832px
+$rbp-tablet-large: 63em;  // 1008px
+$rbp-desktop: 75em;       // 1200px
+
+
+//  JAGS SETTING OVERWRITES
+//------------------------------------------
+$jags_break_mobile_large: $rbp_mobile_large;
+$jags_break_tablet: $rbp_tablet;
+$jags_break_tablet_large: $rbp_tablet_large;
+
+$jags_box_padding: 0;
+
+
+//------------------------------------------------------------------------------------
+//  COLOUR VARS
+//------------------------------------------------------------------------------------
+$black-pure: #000;
+$white-pure: #fff;
+
+$grey1: #eee;
+$grey2: #999;
+$grey3: #e5e5e5;
+$grey4: #666;
+$grey5: #a6a6a6;
+$grey6: #ccc;
+$grey7: #767676;
+
+$black1: #444;
+
+
+// BRAND COLOURS
+//------------------------------------------
+
+
+//------------------------------------------------------------------------------------
+//  BASE VARS
+//------------------------------------------------------------------------------------
+// DEFAULT THEME MOBILE
+$base-color: $black-pure;
+$base-font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
+$display-font-family: "Playfair Display", serif;
+$base-font-size: 100%;
+$base-line-height: 1.25;
+
+// DEFAULT THEME TABLET
+$base-color-tablet: $base-color;
+$base-font-family-tablet: $base-font-family;
+$base-font-size-tablet: $base-font-size;
+$base-line-height-tablet: 1.375;
+
+// DEFAULT THEME TABLET LARGE
+$base-color-tablet-large: $base-color-tablet;
+$base-font-family-tablet-large: $base-font-family-tablet;
+$base-font-size-tablet-large: $base-font-size-tablet;
+$base-line-height-tablet-large: $base-line-height-tablet;
+
+// DARK THEME MOBILE
+$theme-dark-base-color: $white-pure;
+$theme-dark-base-background-color: $black-pure;

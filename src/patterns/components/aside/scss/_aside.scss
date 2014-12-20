@@ -1,0 +1,362 @@
+// Aside
+
+
+// Pattern variables
+$aside-background-color: $white-pure;
+$aside-border-color: $grey1;
+$aside-header-background-color: $white-pure;
+$aside-header-border-color: $grey6;
+$aside-link-color-focus: $black-pure;
+$aside-link-background-color-focus: $white-pure;
+
+$theme-dark-aside-background-color: $black-pure;
+$theme-dark-aside-border-color: $grey4;
+$theme-dark-aside-header-background-color: $black-pure;
+$theme-dark-aside-link-color-focus: $white-pure;
+$theme-dark-aside-link-background-color-focus: $black-pure;
+
+
+@mixin aside-mobile {
+
+    /* ASIDE
+    ------------------------------------------*/
+    .aside {
+        background: $aside-background-color;
+        font-size: pxtopercent(13);
+        outline: none;
+
+        .aside_navigation {outline: none; }
+
+        .aside_links {
+            padding: 0;
+
+            li {
+                background: {
+                    image: url(assets/img/icons/questionmark-badge.png);
+                    position: 0 .05em;
+                    repeat: no-repeat;
+                }
+                list-style: none;
+                margin: 0;
+                padding: 0 0 5px 30px;
+            }
+
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:focus,
+                &:active {
+                    color: $aside-link-color-focus;
+                    background-color: $aside-link-background-color-focus;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        h2 {
+            font: {
+                size: pxtopercent(13,13);
+                style: italic;
+                weight: 400;
+            }
+            margin: 3em 0 2em;
+            text-align: center;
+            text-transform: lowercase;
+            position: relative;
+
+            &:before {
+                content: "";
+                display: block;
+                border-top: solid 1px $aside-header-border-color;
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                z-index: 1;
+            }
+
+            span {
+                background: $aside-header-background-color;
+                padding: 0 10px;
+                position: relative;
+                z-index: 5;
+            }
+        }
+
+        h3 {
+            font-size: pxtopercent(13,13);
+            padding-left: 30px;
+            text-transform: uppercase;
+        }
+
+        .list {
+
+            &--no-style {
+                margin-left: 30px;
+
+                li {margin-bottom: 15px; }
+
+                a {text-decoration: none; }
+            }
+
+            &--tags {
+
+                a {font-size: pxtopercent(11,13); }
+            }
+        }
+
+        .social-links {
+            padding: 0;
+            text-align: center;
+
+            a {
+                background: {
+                    image: url(assets/img/icons/social-sprite.png);
+                    repeat: no-repeat;
+                }
+                border: 1px solid rgb(0,0,0); // fallback
+                border: 1px solid rgba(0,0,0,.25);
+                border-radius: 100px;
+                direction: ltr;
+                display: block;
+                height: 40px;
+                text-indent: -999em;
+                width: 40px;
+            }
+        }
+
+        .social-links_item {
+            display: inline-block;
+            margin: 0 2.5%;
+            vertical-align: top;
+
+            &--twitter a {
+                background-position: 0 0;
+
+                &:hover,
+                &:focus,
+                &:active {background-position: 0 100%; }
+            }
+
+            &--linkedin a {
+                background-position: -40px 0;
+
+                &:hover,
+                &:focus,
+                &:active {background-position: -40px 100%; }
+            }
+
+            &--google a {
+                background-position: 100% 0;
+
+                &:hover,
+                &:focus,
+                &:active {background-position: 100% 100%; }
+            }
+
+            a:hover {background-color: $aside-link-color-focus; }
+        }
+    }
+
+    // Theme dark
+    .theme--dark {
+
+        .aside {
+            background: $theme-dark-aside-background-color;
+
+            .aside_links {
+
+                li {
+                    background: {
+                        image: url(assets/img/icons/questionmark-badge-white.png);
+                    }
+                }
+
+                a {
+                    &:focus,
+                    &:active {
+                        color: $theme-dark-aside-link-color-focus;
+                        background-color: $theme-dark-aside-link-background-color-focus;
+                    }
+                }
+            }
+
+            h2 {
+
+                span {background: $theme-dark-aside-header-background-color; }
+            }
+
+            .social-links_item {
+                border: 1px solid rgb(255,255,255); // fallback
+                border: 1px solid rgba(255,255,255,.75);
+                border-radius: 100px;
+
+                &--twitter a {
+                    background-position: 0 100%;
+
+                    &:hover,
+                    &:focus,
+                    &:active {background-position: 0 0; }
+                }
+
+                &--linkedin a {
+                    background-position: -40px 100%;
+
+                    &:hover,
+                    &:focus,
+                    &:active {background-position: -40px 0; }
+                }
+
+                &--google a {
+                    background-position: 100% 100%;
+
+                    &:hover,
+                    &:focus,
+                    &:active {background-position: 100% 0; }
+                }
+
+                a:hover {background-color: $theme-dark-aside-link-color-focus; }
+            }
+        }
+    }
+
+    // JS
+    .js {
+
+        .aside {
+            border-right: 1px solid $aside-border-color;
+            height: 100%;
+            left: -301px;
+            margin: 0;
+            max-width: 280px;
+            opacity: 0;
+            overflow-y: auto;
+            padding: 0 10px;
+            position: fixed;
+            top: 0;
+            transition: left .3s, opacity 0s .3s, visibility 0s .3s;
+            visibility: hidden;
+            width: 75%;
+            z-index: 8000;
+
+            &.js-is-open {
+                box-shadow: 0 0 10px rgba(0,0,0,.25);
+                left: 0;
+                opacity: 1;
+                transition: left .3s;
+                visibility: visible;
+            }
+
+            .js-hide-show {margin-bottom: 1em; }
+
+            .js-hide-show-btn {
+                background: {
+                    color: transparent;
+                    position: 2px 50%;
+                    repeat: no-repeat;
+                }
+                border: none;
+                font: {
+                    size: pxtopercent(13,13);
+                    weight: 900;
+                }
+                line-height: 1.13636;
+                margin-bottom: 5px;
+                padding-left: 30px;
+                text-transform: uppercase;
+
+                &--collapsed {background-image: url(assets/img/plus-large.png); }
+
+                &--expanded {background-image: url(assets/img/dash-large.gif); }
+
+                &:focus,
+                &:active {text-decoration: underline; }
+            }
+        }
+
+        // Theme dark
+        &.theme--dark {
+
+            .aside {
+                border-right: 1px solid $theme-dark-aside-border-color;
+
+                &.js-is-open {box-shadow: 0 0 10px rgba(255,255,255,.75); }
+
+                .js-hide-show-btn {
+
+                    &--collapsed {background-image: url(assets/img/plus-large-white.png); }
+
+                    &--expanded {background-image: url(assets/img/dash-large-white.gif); }
+                }
+            }
+        }
+    }
+
+} // end mixin
+
+
+@mixin aside-tablet {
+
+    /* ASIDE
+    ------------------------------------------*/
+    .aside {
+        background: transparent;
+        margin: 230px auto 0;
+        padding: 0 40px;
+        position: relative;
+        z-index: 2000;
+    }
+
+    // Theme dark
+    .theme--dark {
+
+        .aside {background: transparent; }
+    }
+
+    // JS
+    .js {
+
+        .aside {
+            border: none;
+            left: 0;
+            margin: 230px auto 0;
+            max-width: 220px;
+            opacity: 1;
+            padding: 0 40px;
+            position: relative;
+            visibility: visible;
+            width: auto;
+
+            &.js-is-open {box-shadow: none; }
+        }
+
+        .js-hide-show-btn {line-height: 1.22222; }
+
+        // Theme dark
+        &.theme--dark {
+
+            .aside {
+                border: none;
+
+                &.js-is-open {box-shadow: none; }
+            }
+        }
+    }
+
+} // end mixin
+
+
+@mixin aside-tablet-medium {
+
+    /* ASIDE
+    ------------------------------------------*/
+    .aside {margin-top: 280px; }
+
+    // JS
+    .js {
+
+        .aside {margin-top: 280px; }
+    }
+
+} // end mixin

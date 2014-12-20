@@ -1,0 +1,26 @@
+// Input
+
+
+// Pattern variables
+$input-border-color: $grey3;
+
+
+@mixin input-mobile {
+
+    /* INPUT
+    ------------------------------------------*/
+    input {
+        background: transparent;
+        border: 1px solid $input-border-color;
+        border-radius: 1px;
+        padding: 5px;
+    }
+
+    input[type="image"],
+    input[type="range"],
+    input[type="file"],
+    input[type="checkbox"],
+    input[type="radio"],
+    input[type="color"] {border: none; }
+
+} // end mixin

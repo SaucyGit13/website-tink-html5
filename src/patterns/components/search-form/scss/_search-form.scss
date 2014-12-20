@@ -1,0 +1,83 @@
+// Search
+
+
+// Pattern variables
+$search-form-border-color: $grey3;
+$search-form-button-background-color-focus: $black-pure;
+
+$theme-dark-search-form-button-background-color-focus: $white-pure;
+
+
+@mixin search-form-mobile {
+
+    /* SEARCH FORM
+    ------------------------------------------*/
+    .search-form {
+        padding-top: 10px;
+
+        h2 {position: absolute; }
+
+        .search-form_container {
+            border: 2px solid $search-form-border-color;
+            border-radius: 100px;
+            padding: 6px 10px 6px 20px;
+            overflow: hidden;
+        }
+
+        input {
+            border: none;
+            display: block;
+            float: left;
+            line-height: 1.75;
+            margin: 0;
+            padding: 0;
+            width: 85%;
+        }
+
+        button {
+            background: {
+                color: transparent;
+                image: url(assets/img/magnify-glass-black.png);
+                position: 50% 50%;
+                repeat: no-repeat;
+            }
+            border: none;
+            border-radius: 100px;
+            display: block;
+            float: right;
+            height: 1.5em;
+            margin: 0;
+            min-height: 23px;
+            padding: 0;
+            width: 15%;
+
+            &:focus,
+            &:active {
+                background: {
+                    color: $search-form-button-background-color-focus;
+                    image: url(assets/img/magnify-glass-white.png);
+                }
+            }
+        }
+    }
+
+    // Theme dark
+    .theme--dark {
+
+        .search-form {
+
+            button {
+                background-image: url(assets/img/magnify-glass-white.png);
+
+                &:focus,
+                &:active {
+                    background: {
+                        color: $theme-dark-search-form-button-background-color-focus;
+                        image: url(assets/img/magnify-glass-black.png);
+                    }
+                }
+            }
+        }
+    }
+
+} // end mixin

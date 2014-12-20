@@ -1,0 +1,56 @@
+// Visibility
+//
+// Generic classes that can be used to help toggle the visibility of elements at different viewport widths.
+
+
+@mixin visibility-mobile {
+
+    /* VISIBILITY
+    ------------------------------------------*/
+    .remove {
+        display: none;
+    }
+
+    .visible {
+        display: block;
+    }
+
+    .remove--mobile {
+        display: none;
+    }
+
+    .visible--mobile {
+        display: block;
+    }
+
+} // end mixin
+
+
+@mixin visibility-tablet {
+
+    /* VISIBILITY
+    ------------------------------------------*/
+    .remove--tablet {
+        display: none;
+    }
+
+    .visible--tablet {
+        display: block;
+    }
+
+} // end mixin
+
+
+@mixin visibility-tablet-large {
+
+    /* VISIBILITY
+    ------------------------------------------*/
+    .remove--tablet-large {
+        display: none;
+    }
+
+    .visible--tablet-large {
+        display: block;
+    }
+
+} // end mixin

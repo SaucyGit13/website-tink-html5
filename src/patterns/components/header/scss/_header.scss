@@ -1,0 +1,129 @@
+// Header
+
+
+// Pattern variables
+$toggle-button-color: $white-pure;
+$toggle-button-background-color: $black-pure;
+
+$theme-dark-toggle-button-color: $black-pure;
+$theme-dark-toggle-button-background-color: $white-pure;
+
+
+@mixin header-mobile {
+
+    /* HEADER
+    ------------------------------------------*/
+    .header {
+        @include clearfix;
+        padding: 10px;
+
+        .header_logo {
+            display: block;
+            float: left;
+            max-width: 80px;
+
+            img {transition: all .3s; }
+
+            &:focus,
+            &:active {
+                background-color: transparent;
+
+                img {
+                    border-radius: 100px;
+                    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+                    transition: all .3s;
+                }
+            }
+        }
+
+        .skip-links {
+            left: 120px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            text-align: left;
+            top: 0;
+            width: 50%;
+        }
+
+        .skip-links_item {
+
+            a {
+                border-radius: 0 0 3px 3px;
+                padding: 10px;
+                position: absolute;
+                top: -10em;
+
+                &:focus,
+                &:active {
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    // JS
+    .js {
+
+        .js-header_toggle-button {
+            background-color: $toggle-button-background-color;
+            border: none;
+            border-radius: 5px;
+            color: $toggle-button-color;
+            display: block;
+            float: right;
+            padding: 5px;
+
+            &:focus,
+            &:active {text-decoration: underline; }
+        }
+
+        // Theme dark
+        &.theme--dark {
+
+            .js-header_toggle-button {
+                color: $theme-dark-toggle-button-color;
+                background-color: $theme-dark-toggle-button-background-color;
+            }
+        }
+    }
+
+} // end mixin
+
+
+@mixin header-tablet {
+
+    /* HEADER
+    ------------------------------------------*/
+    .header {
+        left: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        width: 33.3333%;
+
+        .header_logo {
+            float: none;
+            margin: 50px 50px 40px;
+            max-width: none;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .skip-links {
+            left: 100%;
+            width: 100%;
+        }
+    }
+
+    // JS
+    .js {
+
+        .js-header_toggle-button {display: none; }
+    }
+
+} // end mixin

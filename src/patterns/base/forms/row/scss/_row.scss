@@ -1,0 +1,85 @@
+// Row
+
+
+// Pattern variables
+$row-highlighted-background-color: $grey1;
+
+
+@mixin row-mobile {
+
+    /* ROW
+    ------------------------------------------*/
+    .row {
+        @include clearfix;
+        clear: both;
+        margin-bottom: 1em;
+        padding: 0;
+
+        .row_help-text {
+            display: block;
+            font: {
+                size: pxtopercent(12);
+                style: italic;
+            }
+            margin-top: 2px;
+        }
+
+        .row_note {
+            font: {
+                size: pxtopercent(13);
+                style: italic;
+            }
+
+            &:before {content: "("; }
+
+            &:after {content: ")"; }
+        }
+
+        // Highlighted
+        &--highlighted {background-color: $row-highlighted-background-color; }
+    }
+
+    // LTE 8
+    .lte8 {
+
+        .row {
+
+            &--select {
+                position: relative;
+
+                select {
+                    left: 245px;
+                    position: absolute;
+                    top: 1em;
+                }
+            }
+        }
+    }
+
+} // end mixin
+
+
+@mixin row-tablet {
+
+    /* ROW
+    ------------------------------------------*/
+    .row {
+        padding: 5px 20px;
+
+        // Row inline
+        &--inline {
+
+            label {
+                display: inline-block;
+                padding: {
+                    right: 20px;
+                }
+                text-align: right;
+                width: 220px;
+            }
+
+            .row_help-text {margin-left: 245px; }
+        }
+    }
+
+} // end mixin

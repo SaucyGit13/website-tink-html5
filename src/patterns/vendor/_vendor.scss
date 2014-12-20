@@ -1,0 +1,19 @@
+// Vendor
+//
+// Resources from third parties. These should remain unchanged to ensure they can be updated at any time.
+
+
+// Normalize
+//
+// Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.
+//
+// https://github.com/lawlesscreation/normalize.css
+@import 'contrib/normalize.css/normalize';
+
+
+// Just Another Grid System
+//
+// A responsive, liquid grid system designed for fast and effective CSS layouts.
+//
+// https://github.com/lawlesscreation/just-another-grid-system
+@import 'contrib/just-another-grid-system/jags';

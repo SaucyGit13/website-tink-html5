@@ -1,0 +1,31 @@
+// Default
+
+
+@mixin default-mobile {
+
+    /* DEFAULT
+    ------------------------------------------*/
+
+} // end mixin
+
+
+@mixin default-tablet {
+
+    /* DEFAULT
+    ------------------------------------------*/
+    .main {
+        margin: 40px 55px 0 0;
+    }
+
+} // end mixin
+
+
+@mixin default-tablet-large {
+
+    /* DEFAULT
+    ------------------------------------------*/
+    .main {
+        margin-right: 110px;
+    }
+
+} // end mixin

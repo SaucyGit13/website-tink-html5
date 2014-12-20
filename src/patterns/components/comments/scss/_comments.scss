@@ -1,0 +1,288 @@
+// Comments
+
+
+// Pattern variables
+$comments-border-color: $grey6;
+$comments-skip-link-border-color: $grey5;
+$comments-time-color: $grey4;
+$comments-button-border-color: $grey5;
+$comments-button-color: $black-pure;
+$comments-button-background-color-focus: $black-pure;
+$comments-button-color-focus: $white-pure;
+
+$thme-dark-comments-button-color:  $white-pure;
+$theme-dark-comments-button-background-color-focus:  $white-pure;
+$theme-dark-comments-button-color-focus:  $black-pure;
+
+
+@mixin comments-mobile {
+
+    /* COMMENTS
+    ------------------------------------------*/
+    .comments {
+        @include clearfix;
+        border-top: 1px solid $comments-border-color;
+        padding: 1em 0 2em;
+
+        .comments_count,
+        .comments_skip-link {
+            border: 1px solid $comments-skip-link-border-color;
+            border-radius: 100px;
+            display: inline-block;
+            font: {
+                family: $base-font-family;
+                size: pxtopercent(13);
+            }
+            margin: 1em 10px 1em 0;
+            min-height: 1em;
+            min-width: 2em;
+            padding: .35em 0;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .comments_skip-link {
+            background: {
+                image: url(assets/img/arrow-down-grey-padded.png);
+                position: 100% 50%;
+                repeat: no-repeat;
+            }
+            padding: .35em 35px .35em 15px;
+        }
+
+        .comments_list {
+            clear: both;
+            list-style: none;
+            margin: 2em 0 1em;
+            padding: 0;
+        }
+
+        .comments_article {
+            margin-bottom: 2em;
+            position: relative;
+        }
+
+        .comments_meta {
+
+            cite,
+            time {
+                display: block;
+                font: {
+                    style: normal;
+                    size: pxtopercent(13);
+                }
+                margin: 0 0 5px 60px;
+                text-transform: uppercase;
+            }
+
+            .avatar {
+                left: 0;
+                height: 40px;
+                position: absolute;
+                top: 0;
+                width: 40px;
+            }
+
+            time {color: $comments-time-color; }
+        }
+
+        // REPLY
+        .children {list-style: none; }
+
+        .comments_title {
+
+            &--no-comments {margin-top: .5em; }
+        }
+
+        // COMMENTS FORM
+        .comment-respond {
+            border-top: 1px solid $comments-border-color;
+            margin-top: 3em;
+
+            h3 {
+                font: {
+                    family: $heading-font-family;
+                    size: pxtopercent(26);
+                }
+                text-transform: none;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="url"],
+            textarea {
+                display: block;
+                width: 95%;
+            }
+
+            textarea {min-height: 80px; }
+        }
+
+        .submit,
+        .form-submit input[type="submit"] {
+            background: transparent;
+            border: 1px solid $comments-button-border-color;
+            border-radius: 100px;
+            color: $comments-button-color;
+            font-size: pxtopercent(13);
+            padding: 8px 20px;
+            text-transform: uppercase;
+            width: auto;
+
+            &:focus,
+            &:active,
+            &:hover {
+                background: $comments-button-background-color-focus;
+                color: $comments-button-color-focus;
+            }
+        }
+
+        .reply {
+            font-size: pxtopercent(13);
+            margin-top: -.5em;
+        }
+    }
+
+    // Theme dark
+    .theme--dark {
+
+        .comments {
+
+            .submit {
+                color: $thme-dark-comments-button-color;
+
+                &:focus,
+                &:active,
+                &:hover{
+                    background: $theme-dark-comments-button-background-color-focus;
+                    color: $theme-dark-comments-button-color-focus;
+                }
+            }
+
+            .comments_skip-link {background-image: url(assets/img/arrow-down-white-padded.png); }
+        }
+    }
+
+} // end mixin
+
+
+@mixin comments-mobile-large {
+
+    /* COMMENTS
+    ------------------------------------------*/
+    .comments {
+
+        // COMMENTS FORM
+        .comment-respond {
+
+            input[type="text"],
+            input[type="email"],
+            input[type="url"],
+            textarea {float: left; }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="url"] {width: auto; }
+
+            textarea {
+                min-width: 360px;
+                width: auto;
+            }
+
+            .row_note {
+                display: block;
+                float: left;
+                margin: 7px 0 7px 10px;
+            }
+
+            .row--checkbox {
+
+                label {margin-right: 20%; }
+            }
+        }
+    }
+
+} // end mixin
+
+
+@mixin comments-tablet {
+
+    /* COMMENTS
+    ------------------------------------------*/
+    .comments {
+        padding-top: 2em;
+
+        .comments_article {
+            margin-left: 100px;
+            min-height: 80px;
+        }
+
+        .comments_meta {
+            @include clearfix;
+
+            cite,
+            time {float: left; }
+
+            cite {margin-left: 0; }
+
+            .avatar {
+                height: 80px;
+                left: -100px;
+                width: 80px;
+            }
+
+            time {margin-left: 35px; }
+        }
+
+        // COMMENTS FORM
+        .comment-respond {
+
+            .row {
+                margin: {
+                    left: -20px;
+                    right: -20px;
+                }
+            }
+        }
+    }
+
+} // end mixin
+
+
+@mixin comments-tablet-medium {
+
+    /* COMMENTS
+    ------------------------------------------*/
+    .comments {
+
+        // COMMENTS FORM
+        .comment-respond {
+
+            label {
+                display: block;
+                float: left;
+                padding: 5px 20px 5px 0;
+                text-align: right;
+                width: 100px;
+            }
+
+            .form-submit {
+                clear: both;
+                display: block;
+                margin-left: 120px;
+            }
+
+            .row--checkbox {
+                margin-left: 100px;
+
+                label {
+                    float: none;
+                    padding: 5px 0;
+                    text-align: left;
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+} // end mixin

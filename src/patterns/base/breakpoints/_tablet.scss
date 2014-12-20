@@ -1,0 +1,34 @@
+// Tablet breakpoint mixins
+
+
+/* UTILS
+------------------------------------------------------------------------------------*/
+@include visibility-tablet;
+
+
+/* TYPOGRAPHY
+------------------------------------------------------------------------------------*/
+@include blockquote-tablet;
+@include code-tablet;
+@include headings-tablet;
+@include lists-tablet;
+
+
+/* FORMS
+------------------------------------------------------------------------------------*/
+@include row-tablet;
+
+
+/* COMPONENTS
+------------------------------------------------------------------------------------*/
+@include article-tablet;
+@include aside-tablet;
+@include comments-tablet;
+@include footer-tablet;
+@include header-tablet;
+@include pager-tablet;
+
+
+/* LAYOUTS
+------------------------------------------------------------------------------------*/
+@include default-tablet;
