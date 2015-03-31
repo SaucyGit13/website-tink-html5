@@ -1017,13 +1017,15 @@
         margin-top: -.5em;
     }
 
-    .theme--dark .comments .submit {
+    .theme--dark .comments .submit,
+    .theme--dark .comments .form-submit input[type="submit"] {
         color: #fff;
     }
 
-    .theme--dark .comments .submit:focus,
-    .theme--dark .comments .submit:active,
-    .theme--dark .comments .submit:hover {
+    .theme--dark .comments .submit:focus, .comments .submit:active, .comments .submit:hover,
+    .theme--dark .comments .form-submit input[type="submit"]:focus,
+    .theme--dark .comments .form-submit input[type="submit"]:active,
+    .theme--dark .comments .form-submit input[type="submit"]:hover {
         background: #fff;
         color: #000;
     }
