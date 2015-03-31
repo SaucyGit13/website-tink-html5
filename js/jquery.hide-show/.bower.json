@@ -1,0 +1,31 @@
+{
+  "name": "jquery.hide-show",
+  "version": "1.0.0",
+  "authors": [
+    "(Nomensa <tech@nomensa.com>)"
+  ],
+  "description": "Inserts an accessible buttons/links to hide and show sections of content.",
+  "main": "jquery.hideShow.js",
+  "keywords": [
+    "accessible",
+    "hide",
+    "show",
+    "toggle",
+    "jquery"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/nomensa/jquery.hide-show",
+  "dependencies": {
+    "jquery": "~1.11.1"
+  },
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "9397e8a73ff5b49f86bad18de5105db40180f57d"
+  },
+  "_source": "git://github.com/nomensa/jquery.hide-show.git",
+  "_target": "~1.0.0",
+  "_originalSource": "jquery.hide-show",
+  "_direct": true
+}

@@ -7,7 +7,7 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package tink-tank
+ * @package tink-2014
  */
 
 get_header(); ?>

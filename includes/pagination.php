@@ -2,7 +2,7 @@
 /**
  * The template for displaying pagination controls.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 ?>
 

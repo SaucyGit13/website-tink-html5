@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package tink-tank
+ * @package tink-2014
  */
 
 get_header(); ?>

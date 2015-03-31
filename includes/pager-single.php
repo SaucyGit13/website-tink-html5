@@ -2,7 +2,7 @@
 /**
  * The template for displaying the previous and next pager.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 ?>
 

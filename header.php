@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section, <header> content and start of <main> content.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 ?><!DOCTYPE html>
 <!--[if lt IE 8]><html class="oldie" <?php language_attributes(); ?>><![endif]-->
@@ -23,10 +23,12 @@
 
         <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,900%7CMontserrat:400,700" rel="stylesheet" />
         <link href="<?php bloginfo( 'pingback_url' ); ?>" rel="pingback" />
-        <link href="<?php bloginfo( 'template_directory' ); ?>/dist/theme.min.css" media="screen" rel="stylesheet" />
-        <link href="<?php bloginfo( 'template_directory' ); ?>/dist/print.min.css" media="print" rel="stylesheet" />
+        <link href="<?php bloginfo( 'template_directory' ); ?>/css/normalize.css/normalize.min.css" media="screen" rel="stylesheet" />
+        <link href="<?php bloginfo( 'template_directory' ); ?>/css/just-another-grid-system/jags.min.css" media="screen" rel="stylesheet" />
+        <link href="<?php bloginfo( 'template_directory' ); ?>/css/theme.css" media="screen" rel="stylesheet" />
+        <link href="<?php bloginfo( 'template_directory' ); ?>/css/print.css" media="print" rel="stylesheet" />
 
-        <script src="<?php bloginfo( 'template_directory' ); ?>/dist/assets/vendor/custom/modernizr/modernizr.custom.min.js"></script>
+        <script src="<?php bloginfo( 'template_directory' ); ?>/js/modernizr/modernizr.custom.min.js"></script>
         <script>var siteTheme=document.cookie.replace(/(?:(?:^|.*;\s*)siteTheme\s*\=\s*([^;]*).*$)|^.*$/,'$1');if(''!==siteTheme){var el=document.getElementsByTagName('html')[0];el.className=el.className+' '+siteTheme};
         </script>
         <?php wp_head(); ?>
@@ -35,9 +37,9 @@
     <body <?php body_class(); ?>>
         <header class="header" role="banner">
             <?php if ( is_front_page() && is_home() ) : ?>
-                <span class="header_logo"><img alt="Tink.UK" src="<?php bloginfo( 'template_directory' ); ?>/dist/assets/img/logo.gif" /></span>
+                <span class="header_logo"><img alt="Tink.UK" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/logo.gif" /></span>
             <?php else : ?>
-                <a class="header_logo" href="<?php echo get_option('siteurl'); ?>"><img alt="Tink.UK" src="<?php bloginfo( 'template_directory' ); ?>/dist/assets/img/logo.gif" /></a>
+                <a class="header_logo" href="<?php echo get_option('siteurl'); ?>"><img alt="Tink.UK" src="<?php bloginfo( 'template_directory' ); ?>/assets/img/logo.gif" /></a>
             <?php endif; // is_front_page() && is_home() ?>
 
             <ul class="skip-links">

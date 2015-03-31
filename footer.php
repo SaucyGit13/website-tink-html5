@@ -29,7 +29,10 @@
             <p>Carpe Diem</p>
         </footer><!-- .site-footer -->
 
-        <script src="<?php bloginfo( 'template_directory' ); ?>/dist/init.min.js"></script>
+        <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery/dist/jquery.min.js"></script>
+        <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.hide-show/jquery.hideShow.min.js"></script>
+        <script src="<?php bloginfo( 'template_directory' ); ?>/js/accessible-html5-video-player/js/px-video.js"></script>
+        <script src="<?php bloginfo( 'template_directory' ); ?>/js/init.js"></script>
         <?php wp_footer(); ?>
     </body>
 </html>

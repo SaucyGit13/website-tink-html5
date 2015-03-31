@@ -3,73 +3,6 @@
  > WordPress theme for [http://tink.uk](http://tink.uk)
 
 
-## Setup
-
-Be sure to read [SETUP.md](SETUP.md) before trying to install node packages to make sure your environment is properly configured.
-
-
-### Node packages
-
-Install the project packages by using `cd` to get to the theme root directory then running:
-
-```bash
-$ npm install
-# => once done you can check by running `npm list` to see all project packages
-```
-
-### Bower packages
-
-Install the project packages:
-
-```bash
-$ bower install
-# => once done you can check by running `bower list` to see all project packages
-```
-
-
-## Development
-
-### Watch
-
-Running `grunt` will watch for any changes and recompile:
-
-```bash
-$ grunt
-# => Running "watch" task
-# => Waiting...
-```
-
-### Run-once build / Distribution
-
-This will compile the source files and patterns:
-
-```bash
-$ grunt build
-# => Done, without errors.
-```
-
-
-## Testing
-
-You can run just the Grunt tests. This will only test files that have changed since the last build:
-
-```bash
-$ grunt test
-# => Done, without errors.
-```
-
-
-## Creating a release / tag
-
-Checklist for creating a release tag:
-
-1. Update the version in `package.json`;
-2. Run `grunt build`;
-3. Commit any changes and merge into master;
-4. Create a git tag `git tag [VERSION]`;
-5. Push tag `git push --tags`.
-
-
 ## Site configuration
 
 ### Plugins
@@ -110,3 +43,21 @@ There are four registered menus in the theme, these are:
  - `other_blogs_links` : This appears in the aside and is intended for external URLs linking to post written on other websites
  - `conferences_links` : This appears in the aside and is intended for external URLs linking to conferences attended
  - `footer_links` : This is an optional menu that will add links to the footer;
+
+
+## Development/Testing
+
+You can run tests on the CSS and JS using [Node.js](http://nodejs.org/) (~0.10.31). Once Node.js has been installed, install the project packages:
+
+```bash
+$ npm install
+# => once done you can check by running `npm list` to see all project packages
+```
+
+Then simply run the following command to test the CSS and JS for coding errors:
+
+```bash
+$ npm run test
+# => ...
+# => No code style errors found.
+```

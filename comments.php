@@ -4,7 +4,7 @@
  *
  * The area of the page that contains both current comments and the comment form.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 
 /*
@@ -29,7 +29,7 @@ if ( post_password_required() ) {
             <?php
                 wp_list_comments( array(
                     'avatar_size' => 80,
-                    'callback' => 'tinktank_comment',
+                    'callback' => 'tink2014_comment',
                     'short_ping'  => true,
                     'style'       => 'ol'
                 ) );

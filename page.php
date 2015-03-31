@@ -4,7 +4,7 @@
  *
  * This is the template that displays all pages by default.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 
 get_header(); ?>

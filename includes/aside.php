@@ -4,7 +4,7 @@
  *
  * Contains the main aside content including the search, navigation and theme switcher.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 ?>
 
