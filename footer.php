@@ -4,7 +4,7 @@
  *
  * Contains the closing of the <main> and all content after.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 ?>
 
