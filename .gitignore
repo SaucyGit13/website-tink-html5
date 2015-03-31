@@ -1,0 +1,24 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project files #
+######################
+.sass-cache/
+.tmp/
+node_modules/
+src/patterns/vendor/contrib/
+
+dist/init.js
+dist/print.css
+dist/print.css.map
+dist/theme.css
+dist/theme.css.map
+dist/assets/vendor/custom/*
+!dist/assets/vendor/custom/modernizr
