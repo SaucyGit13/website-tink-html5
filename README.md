@@ -47,7 +47,7 @@ There are four registered menus in the theme, these are:
 
 ## Development/Testing
 
-You can run tests on the CSS and JS using [Node.js](http://nodejs.org/) (~0.10.31). Once Node.js has been installed, install the project packages:
+You can run tests on the CSS and JS with [Node.js](http://nodejs.org/) (~0.10.31). Once Node.js has been installed, install the required packages:
 
 ```bash
 $ npm install

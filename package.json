@@ -7,24 +7,28 @@
     "url": "https://github.com/LjWatson/website-tink-html5"
   },
   "author": {
-    "name": "Léonie Watson <tink@tink.co.uk>"
+    "name": "@LeonieWatson <tink@tink.co.uk>"
   },
-  "contributors": [{
-    "name": "@lawlesscreation",
-    "email": "contact@lawlesscreation.com"
-  }],
+  "contributors": [
+    {
+      "name": "@lawlesscreation",
+      "email": "contact@lawlesscreation.com"
+    }
+  ],
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
+    "test-parker": "parker css/theme.css css/print.css",
     "test-css": "csslint css/theme.css css/print.css --ignore=adjoining-classes,box-model,box-sizing,duplicate-background-images,floats,font-sizes,outline-none,qualified-headings,unique-headings,universal-selector,unqualified-attributes",
     "test-js": "jshint js/init.js && jscs js/init.js",
-    "test": "npm run test-css && npm run test-js"
+    "test": "npm run test-parker && npm run test-css && npm run test-js"
   },
   "devDependencies": {
     "csslint": "^0.10.0",
     "jscs": "^1.12.0",
-    "jslint": "^0.9.0-pre006"
+    "jslint": "^0.9.0-pre006",
+    "parker": "0.0.8"
   },
   "private": true
 }

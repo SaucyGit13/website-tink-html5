@@ -1,15 +1,15 @@
 /*!
  * Tink 2014 Theme JavaScript
  *
- * @author: @lawlesscreation
+ * @author: @LeonieWatson
  *
  */
 (function() {
-    'use strict';
-
     /*
      * Global constants
      */
+    'use strict';
+
     // Media query breakpoints
     var RBP_TABLET = 752;
 
@@ -20,14 +20,13 @@
          */
         var ua = navigator.userAgent.toLowerCase();
 
-        if ((ua.indexOf('webkit') > -1 || ua.indexOf('opera') > -1 || ua.indexOf('msie') > -1) &&
-            document.getElementById && window.addEventListener) {
+        if ((ua.indexOf('webkit') > -1 || ua.indexOf('opera') > -1 || ua.indexOf('msie') > -1) && document.getElementById && window.addEventListener) {
 
             window.addEventListener('hashchange', function() {
                 var element = document.getElementById(location.hash.substring(1));
 
                 if (element) {
-                    if (! /^(?:a|select|input|button|textarea)$/i.test(element.nodeName)) {
+                    if (!/^(?:a|select|input|button|textarea)$/i.test(element.nodeName)) {
                         element.tabIndex = -1;
                     }
 
@@ -47,41 +46,13 @@
 
         themeSwitcher();
 
-        (function() {
-            /*
-             * Toggle aside navigation
-             * @req: https://github.com/nomensa/jquery.hide-show
-             */
-            var asideNav = $('.aside_navigation');
+        asideCollapsible();
 
-            $(asideNav).find('.collapsible').each(function() {
+        scrollableTable();
 
-                // Add class because the plugin requires a class for the trigger element
-                $(this).find('h3').addClass('title');
-
-                $(this).hideShow({
-                    speed: 0,
-                    state: 'hidden',
-                    triggerElementTarget: '.title'
-                });
-            });
-        })();
-
-        (function() {
-            /*
-             * Video player initialization
-             * @req: https://github.com/paypal/accessible-html5-video-player
-             */
-            var videoId = 'myvid';
-
-            new InitPxVideo({
-                'videoId': videoId,
-                'captionsOnDefault': false
-            });
-
-            // Overwrite width set by video player
-            $('#' + videoId).css('width', 'auto');
-        })();
+        if (document.getElementById('myvid')) {
+            videoPlayerInit('myvid');
+        }
     }
 })();
 
@@ -100,13 +71,13 @@ function viewport() {
     var target = window,
         type = 'inner';
 
-    if (!('innerWidth' in window )) {
+    if (!('innerWidth' in window)) {
         type = 'client';
         target = document.documentElement || document.body;
     }
     return {
-        width: target[ type + 'Width' ],
-        height: target[ type + 'Height' ]
+        width: target[type + 'Width'],
+        height: target[type + 'Height']
     };
 }
 
@@ -241,7 +212,8 @@ function themeSwitcher() {
     // Build the switcher template before inserting to save DOM manipulation
     switcherTemplate.append(
         '<li class="js-theme-switcher_item js-theme-switcher_item--light"><button aria-pressed="false" data-class="theme--default">Light<span class="hide"> theme</span></button></li>',
-        '<li class="js-theme-switcher_item js-theme-switcher_item--dark"><button aria-pressed="false" data-class="theme--dark">Dark<span class="hide"> theme</span></button></li>');
+        '<li class="js-theme-switcher_item js-theme-switcher_item--dark"><button aria-pressed="false" data-class="theme--dark">Dark<span class="hide"> theme</span></button></li>'
+    );
 
     // Check if theme is active to apply active class to button
     if ($('html').hasClass('theme--dark')) {
@@ -276,10 +248,11 @@ function themeSwitcher() {
              * Uses same code (uncompressed) as inline script in <head> for
              * reading cookie and applying class to the <html> element
              */
-            var siteTheme = document.cookie.replace(/(?:(?:^|.*;\s*)siteTheme\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+            var el,
+                siteTheme = document.cookie.replace(/(?:(?:^|.*;\s*)siteTheme\s*\=\s*([^;]*).*$)|^.*$/, '$1');
 
             if (siteTheme !== '') {
-                var el = document.getElementsByTagName('html')[0];
+                el = document.getElementsByTagName('html')[0];
                 el.className = el.className + ' ' + siteTheme;
             }
         })();
@@ -311,4 +284,56 @@ function themeCookie(classValue) {
 
     // Create/update the cookie to store the site theme
     document.cookie = 'siteTheme=' + classValue + '; expires=' + expires + '; path=/';
+}
+
+function scrollableTable() {
+    /*
+     * Make tables scrollable
+     * To prevent wide tabled breaking layout on small screens
+     */
+    'use strict';
+
+    var mainContent = $('.main');
+
+    $(mainContent).find('table').each(function() {
+        // Wrap each table in a scrollable div
+        $(this).wrap('<div class="scrollable"></div>');
+    });
+}
+
+function asideCollapsible() {
+    /*
+     * Collapsible aside navigation
+     * @req: https://github.com/nomensa/jquery.hide-show
+     */
+    'use strict';
+
+    var asideNav = $('.aside_navigation');
+
+    $(asideNav).find('.collapsible').each(function() {
+        // Add class because the plugin requires a class for the trigger element
+        $(this).find('h3').addClass('title');
+
+        $(this).hideShow({
+            speed: 0,
+            state: 'hidden',
+            triggerElementTarget: '.title'
+        });
+    });
+}
+
+function videoPlayerInit(videoId) {
+    /*
+     * Video player initialization
+     * @req: https://github.com/paypal/accessible-html5-video-player
+     */
+    'use strict';
+
+    new InitPxVideo({
+        'videoId': videoId,
+        'captionsOnDefault': false
+    });
+
+    // Overwrite width set by video player
+    $('#' + videoId).css('width', 'auto');
 }
