@@ -4,7 +4,7 @@
  *
  * Used for both single and index/archive/search.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 ?>
 

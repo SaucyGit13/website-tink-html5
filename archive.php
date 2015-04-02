@@ -2,7 +2,7 @@
 /**
  * The template for displaying archive pages.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 
 get_header(); ?>
@@ -17,19 +17,19 @@ get_header(); ?>
                 single_tag_title();
 
             elseif ( is_author() ) :
-                printf( esc_html__( 'Author: %s', 'tinktank' ), '<span>' . get_the_author() . '</span>' );
+                printf( esc_html__( 'Author: %s', 'tink2014' ), '<span>' . get_the_author() . '</span>' );
 
             elseif ( is_day() ) :
-                printf( esc_html__( 'Day: %s', 'tinktank' ), get_the_date() );
+                printf( esc_html__( 'Day: %s', 'tink2014' ), get_the_date() );
 
             elseif ( is_month() ) :
-                printf( esc_html__( 'Month: %s', 'tinktank' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'tinktank' ) ) );
+                printf( esc_html__( 'Month: %s', 'tink2014' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'tink2014' ) ) );
 
             elseif ( is_year() ) :
-                printf( esc_html__( 'Year: %s', 'tinktank' ), get_the_date( _x( 'Y', 'yearly archives date format', 'tinktank' ) ) );
+                printf( esc_html__( 'Year: %s', 'tink2014' ), get_the_date( _x( 'Y', 'yearly archives date format', 'tink2014' ) ) );
 
             else :
-                esc_html_e( 'Archives', 'tinktank' );
+                esc_html_e( 'Archives', 'tink2014' );
 
             endif;
         ?>

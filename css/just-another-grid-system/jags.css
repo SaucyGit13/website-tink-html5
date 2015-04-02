@@ -1,0 +1,344 @@
+/*!
+ * Just Another Grid System (JAGS)
+ * A CSS grid system created for developing consistent, responsive and liquid grids.
+ *
+ * @version: 3.0.0
+ * @url: https://github.com/lawlesscreation/just-another-grid-system
+ * @author: @lawlesscreation
+ * @license: licenced under MIT - http://opensource.org/licenses/mit-license.php
+ */
+/*------------------------------------------------------------------------------------
+  Mobile and up
+  Excludes browsers that do not support media queries natively or with a polyfil
+------------------------------------------------------------------------------------*/
+@media only screen {
+  /* JAGS CONFIG
+  ------------------------------------------*/
+  /* Box padding and margin */
+  .grid_box {
+    height: 1%;
+    margin: 0 10px 10px;
+    padding: 10px;
+  }
+
+  /* Border style */
+  .grid--bdr .grid_col--fl-16,
+  .grid--bdr .grid_col--fl-25,
+  .grid--bdr .grid_col--fl-33,
+  .grid--bdr .grid_col--fl-50,
+  .grid--bdr .grid_col--fl-66,
+  .grid--bdr .grid_col--fl-75 {
+    border-right-color: #f00;
+    border-right-width: 1px;
+  }
+  .grid--bdr .grid_col--fr-16,
+  .grid--bdr .grid_col--fr-25,
+  .grid--bdr .grid_col--fr-33,
+  .grid--bdr .grid_col--fr-50,
+  .grid--bdr .grid_col--fr-66,
+  .grid--bdr .grid_col--fr-75 {
+    border-left-color: #f00;
+    border-left-width: 1px;
+  }
+
+  /* JAGS CORE
+  ------------------------------------------*/
+  .grid,
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .grid--6,
+  .grid--66,
+  .grid--33,
+  .grid--75,
+  .grid--25 {
+    clear: both;
+    height: 1%;
+    min-height: 0;
+  }
+  .grid:after,
+  .grid--2:after,
+  .grid--3:after,
+  .grid--4:after,
+  .grid--6:after,
+  .grid--66:after,
+  .grid--33:after,
+  .grid--75:after,
+  .grid--25:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .grid_box:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+}
+/* end media */
+/*--------------------------------------------------------------------------------
+  Mobile (large/landscape) and up
+--------------------------------------------------------------------------------*/
+@media only screen and (min-width: 30.25em) {
+  /* JAGS CONFIG
+  ------------------------------------------*/
+  /* Box padding and margin */
+  .grid_box {
+    margin: 0 10px 10px;
+    padding: 10px;
+  }
+
+  /* Negative margin classes for border overlaps */
+  .grid--bdr .grid_col--fl-16,
+  .grid--bdr .grid_col--fl-25,
+  .grid--bdr .grid_col--fl-50 {
+    border-right-style: solid;
+    margin-right: -1px;
+  }
+  .grid--bdr .grid_col--fr-16,
+  .grid--bdr .grid_col--fr-25,
+  .grid--bdr .grid_col--fr-50 {
+    border-left-style: solid;
+    margin-left: -1px;
+  }
+
+  /* JAGS CORE
+  ------------------------------------------*/
+  /* Column float classes */
+  .grid_col--fl-16,
+  .grid_col--fl-25,
+  .grid_col--fl-50 {
+    float: left;
+  }
+
+  .grid_col--fr-16,
+  .grid_col--fr-25,
+  .grid_col--fr-50 {
+    float: right;
+  }
+
+  /* Remove borders for last columns */
+  .grid--4.grid--bdr .grid_col--2,
+  .grid--6.grid--bdr .grid_col--2,
+  .grid--6.grid--bdr .grid_col--4 {
+    border-style: none;
+    margin: 0;
+  }
+
+  /* Clear columns for responsiveness */
+  .grid--4 .grid_col--3,
+  .grid--6 .grid_col--3,
+  .grid--6 .grid_col--5 {
+    clear: both;
+  }
+
+  /* Column widths: 1/6(50), 1/4(50), 1/2(50) */
+  .grid_col--fl-16,
+  .grid_col--fl-25,
+  .grid_col--fl-50,
+  .grid_col--fr-16,
+  .grid_col--fr-25,
+  .grid_col--fr-50 {
+    width: 50%;
+  }
+
+  .grid_col--oh,
+  .grid--4 .grid_col--2,
+  .grid--6 .grid_col--2,
+  .grid--6 .grid_col--4 {
+    float: none;
+    min-height: 0;
+    overflow: hidden;
+    width: auto;
+  }
+
+  /* Column widths: 1/4(100) */
+  .grid--25 .grid_col--fl-25,
+  .grid--25 .grid_col--fr-25 {
+    float: none;
+    width: 100%;
+  }
+}
+/* end media */
+/*-------------------------------------------------------------------------------
+  Tablet (small/portrait) and up
+--------------------------------------------------------------------------------*/
+@media only screen and (min-width: 48.25em) {
+  /* JAGS CONFIG
+  ------------------------------------------*/
+  /* Box padding and margin */
+  .grid_box {
+    margin: 0 10px 10px;
+    padding: 10px;
+  }
+
+  /* Negative margin classes for border overlaps */
+  .grid--6.grid--bdr .grid_col--fl-16,
+  .grid--6.grid--bdr .grid_col--fl-33,
+  .grid--6.grid--bdr .grid_col--fl-66,
+  .grid--bdr .grid_col--fl-16,
+  .grid--bdr .grid_col--fl-33,
+  .grid--bdr .grid_col--fl-66 {
+    border-right-style: solid;
+    margin-right: -1px;
+  }
+  .grid--6.grid--bdr .grid_col--fr-16,
+  .grid--6.grid--bdr .grid_col--fr-33,
+  .grid--6.grid--bdr .grid_col--fr-66,
+  .grid--bdr .grid_col--fr-16,
+  .grid--bdr .grid_col--fr-33,
+  .grid--bdr .grid_col--fr-66 {
+    border-left-style: solid;
+    margin-left: -1px;
+  }
+
+  /* JAGS CORE
+  ------------------------------------------*/
+  /* Column float classes */
+  .grid--6 .grid_col--fl-16,
+  .grid_col--fl-33,
+  .grid_col--fl-66 {
+    float: left;
+  }
+
+  .grid--6 .grid_col--fr-16,
+  .grid_col--fr-33,
+  .grid_col--fr-66 {
+    float: right;
+  }
+
+  /* Cancel clear columns for responsiveness */
+  .grid--6 .grid_col--3,
+  .grid--6 .grid_col--5 {
+    clear: none;
+  }
+
+  /* Clear columns for responsiveness */
+  .grid--6 .grid_col--4 {
+    clear: both;
+  }
+
+  /* Remove borders for last columns */
+  .grid--3.grid--bdr .grid_col--3,
+  .grid--6.grid--bdr .grid_col--3,
+  .grid--6.grid--bdr .grid_col--6 {
+    border-style: none;
+    margin: 0;
+  }
+
+  /* Column widths: 1/6(33.33`), 1/3(33.33`), 2/3(66.6`) */
+  .grid--6 .grid_col--fl-16,
+  .grid_col--fl-33,
+  .grid--6 .grid_col--fr-16,
+  .grid_col--fr-33 {
+    width: 33.3333%;
+  }
+
+  .grid_col--fl-66,
+  .grid_col--fr-66 {
+    width: 66.6666%;
+  }
+
+  .grid--6 .grid_col--3 {
+    float: none;
+    min-height: 0;
+    overflow: hidden;
+    width: auto;
+  }
+}
+/* end media */
+/*--------------------------------------------------------------------------------
+  Tablet (large/landscape), Desktop (small) and up
+--------------------------------------------------------------------------------*/
+@media only screen and (min-width: 62.25em) {
+  /* JAGS CONFIG
+  ------------------------------------------*/
+  /* Box padding and margin */
+  .grid_box {
+    margin: 0 10px 10px;
+    padding: 10px;
+  }
+
+  /* Negative margin classes for border overlaps */
+  .grid--6.grid--bdr .grid_col--fl-16,
+  .grid--6.grid--bdr .grid_col--fl-25,
+  .grid--6.grid--bdr .grid_col--fl-75,
+  .grid--4.grid--bdr .grid_col--fl-16,
+  .grid--4.grid--bdr .grid_col--fl-25,
+  .grid--4.grid--bdr .grid_col--fl-75,
+  .grid--bdr .grid_col--fl-16,
+  .grid--bdr .grid_col--fl-25,
+  .grid--bdr .grid_col--fl-75 {
+    border-right-style: solid;
+    margin-right: -1px;
+  }
+  .grid--6.grid--bdr .grid_col--fr-16,
+  .grid--6.grid--bdr .grid_col--fr-25,
+  .grid--6.grid--bdr .grid_col--fr-75,
+  .grid--4.grid--bdr .grid_col--fr-16,
+  .grid--4.grid--bdr .grid_col--fr-25,
+  .grid--4.grid--bdr .grid_col--fr-75,
+  .grid--bdr .grid_col--fr-16,
+  .grid--bdr .grid_col--fr-25,
+  .grid--bdr .grid_col--fr-75 {
+    border-left-style: solid;
+    margin-left: -1px;
+  }
+
+  /* JAGS CORE
+  ------------------------------------------*/
+  .grid--6 .grid_col--fl-16,
+  .grid--4 .grid_col--fl-25,
+  .grid_col--fl-75,
+  .grid--25 .grid_col--fl-25 {
+    float: left;
+  }
+
+  .grid--6 .grid_col--fr-16,
+  .grid--4 .grid_col--fr-25,
+  .grid_col--fr-75,
+  .grid--25 .grid_col--fr-25 {
+    float: right;
+  }
+
+  /* Cancel clear columns for responsiveness */
+  .grid--4 .grid_col--3,
+  .grid--6 .grid_col--4 {
+    clear: none;
+  }
+
+  /* Remove borders for last columns */
+  .grid--bdr .grid_col--4 {
+    border-style: none;
+    margin: 0;
+  }
+
+  /* Column widths: 1/6(16.6`), 1/4(25), 3/4(75), 1/4(25) */
+  .grid--6 .grid_col--fl-16,
+  .grid--6 .grid_col--fr-16 {
+    width: 16.6666%;
+  }
+
+  .grid--4 .grid_col--fl-25,
+  .grid--4 .grid_col--fr-25 {
+    width: 25%;
+  }
+
+  .grid--75 .grid_col--fl-75,
+  .grid--75 .grid_col--fr-75 {
+    width: 75%;
+  }
+
+  .grid--25 .grid_col--fl-25,
+  .grid--25 .grid_col--fr-25 {
+    width: 25%;
+  }
+}
+/* end media */
+
+/*# sourceMappingURL=jags.css.map */

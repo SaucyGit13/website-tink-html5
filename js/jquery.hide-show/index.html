@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>jQuery Hide / Show</title>
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" media="screen" href="gh-pages/css/normalize.css" />
+        <link rel="stylesheet" media="screen" href="gh-pages/css/styles.css" />
+        <link rel="stylesheet" media="screen" href="gh-pages/css/demo.css" />
+        <link rel="stylesheet" media="screen" href="gh-pages/css/rainbow/github.css" />
+    </head>
+
+    <body>
+        <div class="header">
+            <p><a href="http://nomensa.com?plugin"><img src="gh-pages/img/nomensa-logo.png" alt="Nomensa humanising technology" width="135" height="38"/></a></p>
+        </div><!-- .header -->
+
+        <div class="main" role="main">
+            <h1>jQuery Hide / Show</h1>
+            <p>Inserts an accessible buttons/links to hide and show sections of content.</p>
+
+
+            <h2>Example A</h2>
+            <p>An example with the default options.</p>
+            <div class="example exampleA">
+                <p>Text content to be hidden text content to be hidden text content to be hidden text content to be hidden</p>
+            </div><!-- .exampleA -->
+
+            <h3>Initialisation</h3>
+<pre>
+<code data-language="javascript">
+$(".exampleA").hideShow();
+</code>
+</pre>
+
+
+            <h2 class="exampleB_heading">Example B</h2>
+            <p>An example with the trigger element inserted into a different location.</p>
+            <div class="example exampleB">
+                <p>Text content to be hidden text content to be hidden text content to be hidden text content to be hidden</p>
+            </div><!-- .exampleB -->
+
+            <h3>Initialisation</h3>
+<pre>
+<code data-language="javascript">
+$(".exampleB").hideShow({
+    insertMethod: 'after',
+    insertTriggerLocation: '.exampleB_heading'
+});
+</code>
+</pre>
+
+
+            <h2>Example C</h2>
+            <p>An example using an existing element on the page as the trigger element.</p>
+
+            <h3 id="triggerC">Contact details</h3>
+            <div class="example exampleC">
+                <p>Telephone 01234 567 890</p>
+                <p>Email <a href="mailto:test@test.com">test@test.com</a></p>
+            </div><!-- .exampleC -->
+
+            <h3>Initialisation</h3>
+<pre>
+<code data-language="javascript">
+$(".exampleC").hideShow({
+    speed: '600',
+    state: 'hidden',
+    triggerElementTarget: '#triggerC'
+});
+</code>
+</pre>
+
+
+            <h2>Public methods</h2>
+
+            <div class="example exampleD">
+                <p>Text content to be hidden text content to be hidden text content to be hidden text content to be hidden</p>
+            </div><!-- .exampleD -->
+
+            <h3 id="triggerE">Contact details</h3>
+            <div class="example exampleE">
+                <p>Telephone 01234 567 890</p>
+                <p>Email <a href="mailto:test@test.com">test@test.com</a></p>
+            </div><!-- .exampleE -->
+        </div><!-- .main -->
+
+        <div class="footer">
+            <div>
+                <p><strong>jQuery.hideShow.js</strong> is licensed under the MIT License. <br />See the LICENSE.md file in the <a href="https://github.com/nomensa/jquery.hide-show">source code</a> for copy permission.</p>
+            </div>
+        </div><!-- .footer -->
+
+        <!-- Plugin scripts -->
+        <script src="gh-pages/js/vendor/jquery/1.11.1/jquery.min.js"></script>
+        <script src="gh-pages/js/vendor/rainbow/rainbow.min.js"></script>
+        <script src="gh-pages/js/vendor/rainbow/language/generic.js"></script>
+        <script src="gh-pages/js/vendor/rainbow/language/javascript.js"></script>
+        <script src="jquery.hideShow.js"></script>
+        <script>
+            $(document).ready( function(){
+                $('.exampleA').hideShow();
+
+                $('.exampleB').hideShow({
+                    insertMethod: 'after',
+                    insertTriggerLocation: '.exampleB_heading'
+                });
+
+                $('.exampleC').hideShow({
+                    speed: '600',
+                    state: 'hidden',
+                    triggerElementTarget: '#triggerC'
+                });
+            });
+
+            (function() {
+                var target = $('.exampleD'),
+                    buttonContainer = $('<div />'),
+                    buttonRebuild = $('<button class="js-btn">Rebuild</button>'),
+                    buttonDestroy = $('<button class="js-btn">Destroy</button>');
+
+                target.hideShow();
+
+                buttonRebuild.attr('disabled', 'disabled');
+
+                buttonRebuild.on('click', function(event) {
+                    event.preventDefault();
+
+                    target.data('plugin_hideShow').rebuild();
+
+                    $(this).attr('disabled', 'disabled');
+                    buttonDestroy.removeAttr('disabled');
+                });
+
+                buttonDestroy.on('click', function(event) {
+                    event.preventDefault();
+
+                    target.data('plugin_hideShow').destroy();
+
+                    $(this).attr('disabled', 'disabled');
+                    buttonRebuild.removeAttr('disabled');
+                });
+
+                buttonContainer.append(buttonDestroy, buttonRebuild);
+                target.after(buttonContainer);
+            })();
+
+            (function() {
+                var target = $('.exampleE'),
+                    buttonContainer = $('<div />'),
+                    buttonRebuild = $('<button class="js-btn">Rebuild</button>'),
+                    buttonDestroy = $('<button class="js-btn">Destroy</button>');
+
+                target.hideShow({
+                    speed: '600',
+                    state: 'hidden',
+                    triggerElementTarget: '#triggerE',
+                    triggerType: 'button'
+                });
+
+                buttonRebuild.attr('disabled', 'disabled');
+
+                buttonRebuild.on('click', function(event) {
+                    event.preventDefault();
+
+                    target.data('plugin_hideShow').rebuild();
+
+                    $(this).attr('disabled', 'disabled');
+                    buttonDestroy.removeAttr('disabled');
+                });
+
+                buttonDestroy.on('click', function(event) {
+                    event.preventDefault();
+
+                    target.data('plugin_hideShow').destroy();
+
+                    $(this).attr('disabled', 'disabled');
+                    buttonRebuild.removeAttr('disabled');
+                });
+
+                buttonContainer.append(buttonDestroy, buttonRebuild);
+                target.after(buttonContainer);
+            })();
+        </script>
+    </body>
+</html>

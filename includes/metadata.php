@@ -4,7 +4,7 @@
  *
  * Contains the category and posted date of the article.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 ?>
 

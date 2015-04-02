@@ -2,7 +2,7 @@
 /**
  * A custom template that single posts that uses the recipe schema
  *
- * @package tink-tank
+ * @package tink-2014
  *
  * Single Post Template: Recipe
  */

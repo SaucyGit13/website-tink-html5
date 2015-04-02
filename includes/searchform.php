@@ -2,7 +2,7 @@
 /**
  * The template for displaying the search form.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 
  ?>

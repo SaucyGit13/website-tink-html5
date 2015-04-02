@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Layouts: Just Another Grid System (JAGS)</title>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="A CSS grid system created for developing consistent, responsive and liquid grids" />
+    <meta name="author" content="Matt Lawson" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" media="screen" href="css/normalize.css" />
+    <link rel="stylesheet" media="screen" href="../jags.css" />
+    <link rel="stylesheet" media="screen" href="css/smoothness/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+
+    <script src="js/respond/respond.min.js"></script>
+  </head>
+
+  <body>
+    <div class="header" role="banner">
+      <h1>Layouts</h1>
+      <p class="tagline">A CSS grid system created for developing consistent, responsive and liquid grids.</p>
+      <div class="nav" role="navigation">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><span>Layouts</span></li>
+        </ul>
+      </div><!-- .nav -->
+    </div><!-- .header -->
+
+    <div class="main" role="main">
+      <h2>One column</h2>
+        <div class="grid">
+          <div class="grid_col--1">
+            <div class="grid_box">.grid .grid_col--1 .grid_box</div>
+          </div>
+        </div><!-- .grid -->
+      <pre>
+    &lt;div class="grid"&gt;
+      &lt;div class="grid_col--1"&gt;
+        &lt;div class="grid_box"&gt;.grid .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+      </pre>
+
+
+      <h2>Two columns</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#two-1">Default</a></li>
+          <li><a href="#two-2">Reversed</a></li>
+          <li><a href="#two-3">With borders</a></li>
+        </ul>
+        <div id="two-1">
+          <h3>Default</h3>
+            <div class="grid--2">
+              <div class="grid_col--1 grid_col--fl-50">
+                <div class="grid_box">.grid--2 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--2 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--2"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-50"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="two-2">
+          <h3>Reversed</h3>
+            <div class="grid--2">
+              <div class="grid_col--1 grid_col--fr-50">
+                <div class="grid_box">.grid--2 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--2 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--2"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-50"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--2 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="two-3">
+          <h3>With borders</h3>
+            <div class="grid--2 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-50">
+                <div class="grid_box">.grid--bdr .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--bdr .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--2 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-50"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>Three columns</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#three-1">Default</a></li>
+          <li><a href="#three-2">Reversed</a></li>
+          <li><a href="#three-3">With borders</a></li>
+        </ul>
+        <div id="three-1">
+          <h3>Default</h3>
+            <div class="grid--3">
+              <div class="grid_col--1 grid_col--fl-33">
+                <div class="grid_box">.grid--3 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-33">
+                <div class="grid_box">.grid--3 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--oh">
+                <div class="grid_box">.grid--3 .grid_col--3 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--3"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--3 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="three-2">
+          <h3>Reversed</h3>
+            <div class="grid--3">
+              <div class="grid_col--1 grid_col--fr-33">
+                <div class="grid_box">.grid--3 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fr-33">
+                <div class="grid_box">.grid--3 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--oh">
+                <div class="grid_box">.grid--3 .grid_col--3 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--3"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fr-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--3 .grid_col--3 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="three-3">
+          <h3>With borders</h3>
+            <div class="grid--3 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-33">
+                <div class="grid_box">.grid--bdr .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-33">
+                <div class="grid_box">.grid--bdr .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--oh">
+                <div class="grid_box">.grid--bdr .grid_col--3 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--3 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--3 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>Four columns</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#four-1">Default</a></li>
+          <li><a href="#four-2">Reversed</a></li>
+          <li><a href="#four-3">With borders</a></li>
+        </ul>
+        <div id="four-1">
+          <h3>Default</h3>
+            <div class="grid--4">
+              <div class="grid_col--1 grid_col--fl-25">
+                <div class="grid_box">.grid--4 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-25">
+                <div class="grid_box">.grid--4 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fl-25">
+                <div class="grid_box">.grid--4 .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--oh">
+                <div class="grid_box">.grid--4 .grid_col--4 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--4"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--3 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--4 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="four-2">
+          <h3>Reversed</h3>
+            <div class="grid--4">
+              <div class="grid_col--1 grid_col--fr-25">
+                <div class="grid_box">.grid--4 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fr-25">
+                <div class="grid_box">.grid--4 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fr-25">
+                <div class="grid_box">.grid--4 .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--oh">
+                <div class="grid_box">.grid--4 .grid_col--4 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--4"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fr-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fr-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--3 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--4 .grid_col--4 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="four-3">
+          <h3>With borders</h3>
+            <div class="grid--4 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-25">
+                <div class="grid_box">.grid--bdr .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-25">
+                <div class="grid_box">.grid--bdr .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fl-25">
+                <div class="grid_box">.grid--bdr .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--oh">
+                <div class="grid_box">.grid--bdr .grid_col--4 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--4 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--3 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--4 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>Six columns</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#six-1">Default</a></li>
+          <li><a href="#six-2">Reversed</a></li>
+          <li><a href="#six-3">With borders</a></li>
+        </ul>
+        <div id="six-1">
+          <h3>Default</h3>
+            <div class="grid--6">
+              <div class="grid_col--1 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--4 .grid_box</div>
+              </div>
+              <div class="grid_col--5 grid_col--fl-16">
+                <div class="grid_box">.grid--6 .grid_col--5 .grid_box</div>
+              </div>
+              <div class="grid_col--6 grid_col--oh">
+                <div class="grid_box">.grid--6 .grid_col--6 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--6"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--3 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--4 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--5 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--5 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--6 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--6 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="six-2">
+          <h3>Reversed</h3>
+            <div class="grid--6">
+              <div class="grid_col--1 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--4 .grid_box</div>
+              </div>
+              <div class="grid_col--5 grid_col--fr-16">
+                <div class="grid_box">.grid--6 .grid_col--5 .grid_box</div>
+              </div>
+              <div class="grid_col--6 grid_col--oh">
+                <div class="grid_box">.grid--6 .grid_col--6 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--6"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--3 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--4 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--5 grid_col--fr-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--5 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--6 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--6 .grid_col--6 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="six-3">
+          <h3>With borders</h3>
+            <div class="grid--6 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--2 .grid_box</div>
+              </div>
+              <div class="grid_col--3 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--3 .grid_box</div>
+              </div>
+              <div class="grid_col--4 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--4 .grid_box</div>
+              </div>
+              <div class="grid_col--5 grid_col--fl-16">
+                <div class="grid_box">.grid--bdr .grid_col--5 .grid_box</div>
+              </div>
+              <div class="grid_col--6 grid_col--oh">
+                <div class="grid_box">.grid--bdr .grid_col--6 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--6 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--3 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--3 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--4 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--4 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--5 grid_col--fl-16"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--5 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--6 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--bdr .grid_col--6 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>66/33</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#6633-1">Default</a></li>
+          <li><a href="#6633-2">Reversed</a></li>
+          <li><a href="#6633-3">With borders</a></li>
+        </ul>
+        <div id="6633-1">
+          <h3>Default</h3>
+            <div class="grid--66">
+              <div class="grid_col--1 grid_col--fl-66">
+                <div class="grid_box">.grid--66 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--66 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--66"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-66"&gt;
+        &lt;div class="grid_box"&gt;.grid--66 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--66 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="6633-2">
+          <h3>Reversed</h3>
+            <div class="grid--66">
+              <div class="grid_col--1 grid_col--fr-66">
+                <div class="grid_box">.grid--66 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--66 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--66"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-66"&gt;
+        &lt;div class="grid_box"&gt;.grid--66 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--66 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="6633-3">
+          <h3>With borders</h3>
+            <div class="grid--66 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-66">
+                <div class="grid_box">.grid--66 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--66 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--66 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-66"&gt;
+        &lt;div class="grid_box"&gt;.grid--66 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--66 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>33/66</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#3366-1">Default</a></li>
+          <li><a href="#3366-2">Reversed</a></li>
+          <li><a href="#3366-3">With borders</a></li>
+        </ul>
+        <div id="3366-1">
+          <h3>Default</h3>
+            <div class="grid--33">
+              <div class="grid_col--1 grid_col--fl-33">
+                <div class="grid_box">.grid--33 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--33 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--33"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--33 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--33 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="3366-2">
+          <h3>Reversed</h3>
+            <div class="grid--33">
+              <div class="grid_col--1 grid_col--fr-33">
+                <div class="grid_box">.grid--33 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--33 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--33"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--33 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--33 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="3366-3">
+          <h3>With borders</h3>
+            <div class="grid--33 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-33">
+                <div class="grid_box">.grid--33 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--33 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--33 grid--bdr"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-33"&gt;
+        &lt;div class="grid_box"&gt;.grid--33 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--33 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>75/25</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#7525-1">Default</a></li>
+          <li><a href="#7525-2">Reversed</a></li>
+          <li><a href="#7525-3">With borders</a></li>
+        </ul>
+        <div id="7525-1">
+          <h3>Default</h3>
+            <div class="grid--75">
+              <div class="grid_col--1 grid_col--fl-75">
+                <div class="grid_box">.grid--75 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--75 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--75"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-75"&gt;
+        &lt;div class="grid_box"&gt;.grid--75 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--75 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="7525-2">
+          <h3>Reversed</h3>
+            <div class="grid--75">
+              <div class="grid_col--1 grid_col--fr-75">
+                <div class="grid_box">.grid--75 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--75 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--75"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-75"&gt;
+        &lt;div class="grid_box"&gt;.grid--75 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--75 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="7525-3">
+          <h3>With borders</h3>
+            <div class="grid--75 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-75">
+                <div class="grid_box">.grid--75 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--75 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--75"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-75"&gt;
+        &lt;div class="grid_box"&gt;.grid--75 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--75 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+      </div><!-- .tabs -->
+
+
+      <h2>25/75</h2>
+      <div class="tabs">
+        <ul>
+          <li><a href="#2575-1">Default</a></li>
+          <li><a href="#2575-2">Reversed</a></li>
+          <li><a href="#2575-3">With borders</a></li>
+        </ul>
+        <div id="2575-1">
+          <h3>Default</h3>
+            <div class="grid--25">
+              <div class="grid_col--1 grid_col--fl-25">
+                <div class="grid_box">.grid--25 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--25 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--25"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--25 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--25 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="2575-2">
+          <h3>Reversed</h3>
+            <div class="grid--25">
+              <div class="grid_col--1 grid_col--fr-25">
+                <div class="grid_box">.grid--25 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--25 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--25"&gt;
+      &lt;div class="grid_col--1 grid_col--fr-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--25 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--25 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+        <div id="2575-3">
+          <h3>With borders</h3>
+            <div class="grid--25 grid--bdr">
+              <div class="grid_col--1 grid_col--fl-25">
+                <div class="grid_box">.grid--25 .grid_col--1 .grid_box</div>
+              </div>
+              <div class="grid_col--2 grid_col--oh">
+                <div class="grid_box">.grid--25 .grid_col--2 .grid_box</div>
+              </div>
+            </div><!-- .grid -->
+          <pre>
+    &lt;div class="grid--25"&gt;
+      &lt;div class="grid_col--1 grid_col--fl-25"&gt;
+        &lt;div class="grid_box"&gt;.grid--25 .grid_col--1 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="grid_col--2 grid_col--oh"&gt;
+        &lt;div class="grid_box"&gt;.grid--25 .grid_col--2 .grid_box&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- .grid --&gt;
+          </pre>
+        </div>
+      </div><!-- .tabs -->
+    </div><!-- .main -->
+
+    <div class="footer" role="contentinfo">
+      <p>Copyright &copy; 2013 <a href="http://twitter.com/lawlesscreation">@lawlesscreation</a></p>
+      <p>Licensed under <a href="http://opensource.org/licenses/mit-license.php">MIT</a></p>
+    </div><!-- .footer -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery/1.10.2/jquery.min.js">\x3C/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>window.jQuery.ui || document.write('<script src="js/jqueryui/1.10.3/jquery-ui.min.js">\x3C/script>')</script>
+    <script>
+      // for the gh-pages demo only. Not required for functionality.
+      $(function() {
+        $('.tabs').tabs();
+      });
+    </script>
+  </body>
+</html>

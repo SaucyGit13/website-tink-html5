@@ -2,8 +2,8 @@
 /**
  * The template for displaying the previous and next pager.
  *
- * @package tink-tank
+ * @package tink-2014
  */
 ?>
 
-<?php tinktank_pager(); ?>
+<?php tink2014_pager(); ?>

@@ -2,12 +2,12 @@
 /**
  * Functions and definitions
  *
- * @package tink-tank
+ * @package tink-2014
  */
 
-if ( ! function_exists( 'tinktank_setup' ) ) :
+if ( ! function_exists( 'tink2014_setup' ) ) :
 
-    function tinktank_setup() {
+    function tink2014_setup() {
         /**
          * Sets up theme defaults and registers support for various WordPress features.
          *
@@ -39,15 +39,15 @@ if ( ! function_exists( 'tinktank_setup' ) ) :
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
         ));
     }
-endif; // tinktank_setup
-add_action( 'after_setup_theme', 'tinktank_setup' );
+endif; // tink2014_setup
+add_action( 'after_setup_theme', 'tink2014_setup' );
 
 
-if ( ! function_exists( 'tinktank_pager' ) ) :
+if ( ! function_exists( 'tink2014_pager' ) ) :
     /**
      * Displays navigation to next/previous set of posts when applicable.
      */
-    function tinktank_pager() {
+    function tink2014_pager() {
         global $wp_query;
 
         // Don't print empty markup if there's only one page.
@@ -74,10 +74,10 @@ if ( ! function_exists( 'tinktank_pager' ) ) :
         </nav><!-- .pager -->
       <?php
     }
-endif; // tinktank_pager
+endif; // tink2014_pager
 
 
-function tinktank_comment($comment, $args, $depth) {
+function tink2014_comment($comment, $args, $depth) {
     /**
      * Custom comment markup
      *
@@ -127,7 +127,7 @@ function tinktank_comment($comment, $args, $depth) {
 }
 
 
-function tinktank_wp_title( $title, $sep ) {
+function tink2014_wp_title( $title, $sep ) {
     /**
      * Filters wp_title to print a neat <title> tag based on what is being viewed.
      *
@@ -157,7 +157,7 @@ function tinktank_wp_title( $title, $sep ) {
 
     return $title;
 }
-add_filter( 'wp_title', 'tinktank_wp_title', 10, 2 );
+add_filter( 'wp_title', 'tink2014_wp_title', 10, 2 );
 
 
 function video_player($atts) {
