@@ -84,5 +84,6 @@
         <li class="social-links_item social-links_item--twitter"><a href="https://twitter.com/LeonieWatson">Twitter: @LeonieWatson</a></li>
         <li class="social-links_item social-links_item--linkedin"><a href="https://www.linkedin.com/in/lwatson">LinkedIn: LWatson</a></li>
         <li class="social-links_item social-links_item--google"><a href="https://plus.google.com/105951836502951354085/posts">Google+: Léonie Watson</a></li>
+        <li class="social-links_item social-links_item--github"><a href="https://github.com/LJWatson">GitHub: LJWatson</a></li>
     </ul>
 </aside><!-- .aside -->

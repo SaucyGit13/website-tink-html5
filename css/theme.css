@@ -716,13 +716,23 @@
     }
 
     .aside .social-links_item--google a {
-        background-position: 100% 0;
+        background-position: -80px 0;
     }
 
     .aside .social-links_item--google a:hover,
     .aside .social-links_item--google a:focus,
     .aside .social-links_item--google a:active {
-        background-position: 100% 100%;
+        background-position: -80px 100%;
+    }
+
+    .aside .social-links_item--github a {
+        background-position: -120px 0;
+    }
+
+    .aside .social-links_item--github a:hover,
+    .aside .social-links_item--github a:focus,
+    .aside .social-links_item--github a:active {
+        background-position: -120px 100%;
     }
 
     .aside .social-links_item a:hover {
@@ -774,13 +784,23 @@
     }
 
     .theme--dark .aside .social-links_item--google a {
-        background-position: 100% 100%;
+        background-position: -80px 100%;
     }
 
     .theme--dark .aside .social-links_item--google a:hover,
     .theme--dark .aside .social-links_item--google a:focus,
     .theme--dark .aside .social-links_item--google a:active {
-        background-position: 100% 0;
+        background-position: -80px 0;
+    }
+
+    .theme--dark .aside .social-links_item--github a {
+        background-position: -120px 100%;
+    }
+
+    .theme--dark .aside .social-links_item--github a:hover,
+    .theme--dark .aside .social-links_item--github a:focus,
+    .theme--dark .aside .social-links_item--github a:active {
+        background-position: -120px 0;
     }
 
     .theme--dark .aside .social-links_item a:hover {
