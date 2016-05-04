@@ -79,11 +79,11 @@
         <?php endif; // has_nav_menu() ?>
     </nav><!-- .aside_navigation -->
 
-    <h2><span>Follow tink</span></h2>
+    <h2><span>Follow L&eacute;onie</span></h2>
     <ul class="social-links">
         <li class="social-links_item social-links_item--twitter"><a href="https://twitter.com/LeonieWatson">Twitter: @LeonieWatson</a></li>
+		        <li class="social-links_item social-links_item--github"><a href="https://github.com/LJWatson">GitHub: @LJWatson</a></li>
         <li class="social-links_item social-links_item--linkedin"><a href="https://www.linkedin.com/in/lwatson">LinkedIn: LWatson</a></li>
-        <li class="social-links_item social-links_item--google"><a href="https://plus.google.com/105951836502951354085/posts">Google+: Léonie Watson</a></li>
-        <li class="social-links_item social-links_item--github"><a href="https://github.com/LJWatson">GitHub: LJWatson</a></li>
+        <!-- <li class="social-links_item social-links_item--google"><a href="https://plus.google.com/105951836502951354085/posts">Google+: Léonie Watson</a></li> -->
     </ul>
 </aside><!-- .aside -->
