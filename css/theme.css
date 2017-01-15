@@ -1877,7 +1877,7 @@
 /*-------------------------------------------------------------------------------
     Tablet (small/portrait) and up
 --------------------------------------------------------------------------------*/
-@media only screen and (min-width: 47em) {
+@media only screen and (min-width: 48.25em) {
 
     body {
         font: 100%/1.375 "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -2251,7 +2251,7 @@
 /*--------------------------------------------------------------------------------
     Tablet (large/landscape) and up
 --------------------------------------------------------------------------------*/
-@media only screen and (min-width: 63em) {
+@media only screen and (min-width: 62.25em) {
 
     body {
         color: #000;
