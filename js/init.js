@@ -11,7 +11,7 @@
     'use strict';
 
     // Media query breakpoints
-    var RBP_TABLET = 752;
+    var RBP_TABLET = 772;
 
     (function() {
         /*
