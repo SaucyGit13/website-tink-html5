@@ -24,8 +24,7 @@
         <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,900%7CMontserrat:400,700" rel="stylesheet" />
         <link href="<?php bloginfo( 'pingback_url' ); ?>" rel="pingback" />
         <link href="<?php bloginfo( 'template_directory' ); ?>/css/normalize.css/normalize.min.css" media="screen" rel="stylesheet" />
-        <link href="<?php bloginfo( 'template_directory' ); ?>/css/just-another-grid-system/jags.min.css" media="screen" rel="stylesheet" />
-        <link href="<?php bloginfo( 'template_directory' ); ?>/css/theme.css" media="screen" rel="stylesheet" />
+        <link href="<?php bloginfo( 'template_directory' ); ?>/css/theme2017.css" media="screen" rel="stylesheet" />
         <link href="<?php bloginfo( 'template_directory' ); ?>/css/print.css" media="print" rel="stylesheet" />
 
         <script src="<?php bloginfo( 'template_directory' ); ?>/js/modernizr/modernizr.custom.min.js"></script>
@@ -48,8 +47,8 @@
             </ul><!-- .skip-links -->
         </header><!-- .header -->
 
-        <div class="grid--66">
-            <div class="grid_col--1 grid_col--fr-66">
+        <div class="flex-row">
+            <div class="flex-col">
                 <main class="grid_box main" role="main">
                     <?php if ( is_front_page() && is_home() ) : ?>
                     <h1 class="hide"><?php echo get_bloginfo( 'name' ); ?></h1>
